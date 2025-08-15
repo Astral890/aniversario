@@ -22,6 +22,8 @@ server.get("/night",(req,res)=>res.sendFile(_dirname+"/pages/night.html"));
 server.post("/registrarAsistenciaDia", mdb.asistenciaDia);
 server.post("/registrarAsistenciaNoche", mdb.asistencaNoche);
 server.post("/getEmployee", mdb.getEmployee);
+server.post("/actualizarDia", mdb.actualizarDia);
+server.post("/actualizarNoche", mdb.actualizarNoche);
 server.get('/exportar', async (req, res) => {
   try {
     const query = `SELECT numero_empleado, nombre, asistencia_noche, asistencia_dia FROM invitados`;
